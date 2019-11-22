@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.testautomation.mesaj'
+version = '1.0-SNAPSHOT'
+
+description = """SerenityRest"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+
+    maven { url "http://jcenter.bintray.com" }
+}
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-simple', version:'1.7.7'
+    compile group: 'com.google.guava', name: 'guava', version:'23.6-jre'
+    compile group: 'net.serenity-bdd', name: 'serenity-core', version:'2.0.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-junit', version:'2.0.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay', version:'2.0.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version:'2.0.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version:'2.0.9'
+    compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version:'1.9.19'
+    compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'org.assertj', name: 'assertj-core', version:'3.6.2'
+    compile group: 'org.hamcrest', name: 'hamcrest-all', version:'1.3'
+}
